@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="battleShip.Board" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="battleShip.Ship" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="battleShip.Submarine" Collapsed="true">
+    <Position X="4.75" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="3.812" />
+        <Point X="3.75" Y="5.625" />
+        <Point X="4.75" Y="5.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Submarine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="battleShip.Destroyer" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="3.812" />
+        <Point X="3.75" Y="4.625" />
+        <Point X="4.75" Y="4.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Destroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="battleShip.Carrier" Collapsed="true">
+    <Position X="4.75" Y="7.25" Width="1.5" />
+    <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="3.812" />
+        <Point X="3.75" Y="7.625" />
+        <Point X="4.75" Y="7.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Carrier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="battleShip.BattShip" Collapsed="true">
+    <Position X="4.75" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="3.812" />
+        <Point X="3.75" Y="6.625" />
+        <Point X="4.75" Y="6.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BattShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="battleShip.Game">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="player1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="battleShip.Player">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="board" />
+      <Field Name="ship" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

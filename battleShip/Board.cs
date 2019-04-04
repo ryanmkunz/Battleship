@@ -6,22 +6,17 @@ using System.Threading.Tasks;
 
 namespace battleShip
 {
-    class Board
+    public class Board
     {
-        //testingtesting
-        //variables
-        public int [,] GameState = new int[20, 20];
-        public int BoardSize = 20;
+        public int [,] GameState;
+        public int BoardSize;
         
-
-        //constructor
         public Board()
         {
-
+            BoardSize = 20;
+            GameState = new int[BoardSize, BoardSize];
         }
-        //methods
-        //TODO: write a board class that is called on to update the display with the new game state
-        //should take in a 2d array as input 
+
         public void displayBoard()
         {
             Console.WriteLine("    A"+" B"+" C" + " D" + " E" + " F" + " G" + " H" + " I" + " J" + " K" + " L" + " M" + " N" + " O" + " P" + " Q" + " R" + " S" + " T");
