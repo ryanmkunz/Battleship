@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="battleShip.Board" Collapsed="true">
+  <Class Name="battleShip.Board">
     <Position X="0.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Ship" Collapsed="true">
-    <Position X="3" Y="3.25" Width="1.5" />
+  <Class Name="battleShip.Ship">
+    <Position X="3" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Submarine" Collapsed="true">
-    <Position X="4.75" Y="5.25" Width="1.5" />
+  <Class Name="battleShip.Submarine">
+    <Position X="6.75" Y="7" Width="1.5" />
     <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="3.812" />
-        <Point X="3.75" Y="5.625" />
-        <Point X="4.75" Y="5.625" />
+        <Point X="3.75" Y="4.69" />
+        <Point X="3.75" Y="7.688" />
+        <Point X="6.75" Y="7.688" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -28,13 +28,13 @@
       <FileName>Submarine.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Destroyer" Collapsed="true">
-    <Position X="4.75" Y="4.25" Width="1.5" />
+  <Class Name="battleShip.Destroyer">
+    <Position X="5" Y="8" Width="1.5" />
     <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="3.812" />
-        <Point X="3.75" Y="4.625" />
-        <Point X="4.75" Y="4.625" />
+        <Point X="3.75" Y="4.69" />
+        <Point X="3.75" Y="8.669" />
+        <Point X="5" Y="8.669" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -42,13 +42,13 @@
       <FileName>Destroyer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Carrier" Collapsed="true">
-    <Position X="4.75" Y="7.25" Width="1.5" />
-    <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
+  <Class Name="battleShip.Carrier">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <InheritanceLine Type="battleShip.Ship" ManuallyRouted="true" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="3.812" />
-        <Point X="3.75" Y="7.625" />
-        <Point X="4.75" Y="7.625" />
+        <Point X="3.75" Y="4.69" />
+        <Point X="3.75" Y="5.669" />
+        <Point X="10.25" Y="5.669" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -56,13 +56,15 @@
       <FileName>Carrier.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.BattShip" Collapsed="true">
-    <Position X="4.75" Y="6.25" Width="1.5" />
-    <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
+  <Class Name="battleShip.BattShip">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <InheritanceLine Type="battleShip.Ship" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.75" Y="3.812" />
-        <Point X="3.75" Y="6.625" />
-        <Point X="4.75" Y="6.625" />
+        <Point X="3.75" Y="4.69" />
+        <Point X="3.75" Y="5.283" />
+        <Point X="3.752" Y="5.283" />
+        <Point X="3.752" Y="6.669" />
+        <Point X="8.5" Y="6.669" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
