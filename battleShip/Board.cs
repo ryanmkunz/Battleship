@@ -8,6 +8,7 @@ namespace battleShip
 {
     class Board
     {
+        //testingtesting
         //variables
         public int [,] GameState = new int[20, 20];
         public int BoardSize = 20;
