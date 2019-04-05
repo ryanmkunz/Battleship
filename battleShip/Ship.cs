@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace battleShip
 {
-    abstract class Ship
+    public abstract class Ship
     {
         public int Length;
         public int[] Position;
@@ -23,11 +23,6 @@ namespace battleShip
             {
                 Condition[i] = true;
             }
-        }
-
-        public virtual void MoveShip()
-        {
-            throw new System.NotImplementedException();
         }
 
         public virtual void PlaceShip()

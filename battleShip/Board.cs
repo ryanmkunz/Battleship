@@ -18,7 +18,7 @@ namespace battleShip
             GameState = new int[BoardSize, BoardSize];
         }
 
-        public void displayBoard()
+        public void DisplayBoard()
         {
             Console.WriteLine("    A"+" B"+" C" + " D" + " E" + " F" + " G" + " H" + " I" + " J" + " K" + " L" + " M" + " N" + " O" + " P" + " Q" + " R" + " S" + " T");
             for (int i = 0; i < BoardSize; i++)

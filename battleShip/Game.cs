@@ -12,12 +12,18 @@ namespace battleShip
 
         public Game()
         {
-
+            player1 = new Player();
+            player2 = new Player();
         }
 
         public void RunGame()
         {
-            throw new System.NotImplementedException();
+            UserInterface.DisplayWelcome();
+            UserInterface.DisplayNamePrompt(1);
+            player1.name = Console.ReadLine();
+            UserInterface.DisplayNamePrompt(2);
+            player2.name = Console.ReadLine();
+            UserInterface.DisplayPlacementMenu();
         }
 
         public void CheckHitOrMiss()

@@ -14,7 +14,8 @@ namespace battleShip
 
         public static void DisplayPlacementMenu()
         {
-            throw new System.NotImplementedException();
+            //pass in the ship type
+            Console.WriteLine("Please place your ships");
         }
 
         public static void DisplayHitMiss()
@@ -35,6 +36,16 @@ namespace battleShip
         public static void DisplayTargeting()
         {
             throw new System.NotImplementedException();
+        }
+
+        public static void DisplayWelcome()
+        {
+            Console.WriteLine("Welcome to Battleship!");
+        }
+
+        public static void DisplayNamePrompt(int playerNumber)
+        {
+            Console.WriteLine("Enter Player " + playerNumber + " name:");
         }
     }
 }

@@ -3,46 +3,48 @@
   <Class Name="battleShip.Board">
     <Position X="3" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAACBAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>ACAAAAAAAAAAAAAAgAAAAAAAAACBAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="battleShip.Ship">
     <Position X="5.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAACAAgAgAAAAAABAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Ship.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Submarine">
-    <Position X="8.25" Y="3.25" Width="1.5" />
+  <Class Name="battleShip.submarine">
+    <Position X="8.25" Y="3.75" Width="1.5" />
     <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
       <Path>
-        <Point X="6.25" Y="2.44" />
-        <Point X="6.25" Y="3.938" />
-        <Point X="8.25" Y="3.938" />
+        <Point X="6.25" Y="3.017" />
+        <Point X="6.25" Y="4.438" />
+        <Point X="8.25" Y="4.438" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Submarine.cs</FileName>
+      <FileName>submarine.cs</FileName>
+      <NewMemberFileName>Submarine.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Destroyer">
-    <Position X="6.5" Y="4.25" Width="1.5" />
+  <Class Name="battleShip.destroyer">
+    <Position X="6.5" Y="5" Width="1.5" />
     <InheritanceLine Type="battleShip.Ship" FixedToPoint="true">
       <Path>
-        <Point X="6.25" Y="2.44" />
-        <Point X="6.25" Y="4.919" />
-        <Point X="6.5" Y="4.919" />
+        <Point X="6.25" Y="3.017" />
+        <Point X="6.25" Y="5.669" />
+        <Point X="6.5" Y="5.669" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Destroyer.cs</FileName>
+      <FileName>destroyer.cs</FileName>
+      <NewMemberFileName>Destroyer.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.Carrier">
+  <Class Name="battleShip.carrier">
     <Position X="11.75" Y="1.25" Width="1.5" />
     <InheritanceLine Type="battleShip.Ship" ManuallyRouted="true" FixedToPoint="true">
       <Path>
@@ -52,21 +54,23 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Carrier.cs</FileName>
+      <FileName>carrier.cs</FileName>
+      <NewMemberFileName>Carrier.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="battleShip.BattShip">
-    <Position X="10" Y="2.25" Width="1.5" />
+  <Class Name="battleShip.battShip">
+    <Position X="10" Y="2.5" Width="1.5" />
     <InheritanceLine Type="battleShip.Ship" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="6.25" Y="2.44" />
-        <Point X="6.25" Y="2.919" />
-        <Point X="10" Y="2.919" />
+        <Point X="6.25" Y="3.017" />
+        <Point X="6.25" Y="3.169" />
+        <Point X="10" Y="3.169" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BattShip.cs</FileName>
+      <FileName>battShip.cs</FileName>
+      <NewMemberFileName>BattShip.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="battleShip.Game">
@@ -82,7 +86,7 @@
   <Class Name="battleShip.Player">
     <Position X="0.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAA=</HashCode>
+      <HashCode>CAAAAAAAAAIAAAAAAAAAAAAgAAAMAAAAYAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -92,7 +96,7 @@
   <Class Name="battleShip.UserInterface">
     <Position X="14.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAACAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAQIICAAAAAAAAAAAAAAABAAABAAAAIAAAAAAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -7,6 +7,7 @@ namespace battleShip
 {
     public class Player
     {
+        public string name;
         public Board board;
         public Ship destroyer;
         public Ship submarine;
@@ -25,6 +26,11 @@ namespace battleShip
         public void SelectTarget()
         {
             UserInterface.DisplayTargeting();
+        }
+
+        public void PlaceShips()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

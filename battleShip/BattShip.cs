@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace battleShip
 {
-    class BattShip : Ship
+    public class battShip : Ship
     {
-        //variables
-
-        //constructor
-        public BattShip()
+        public battShip()
         {
-
+            Length = 4;
         }
-
-        //methods
     }
 }
