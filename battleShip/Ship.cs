@@ -41,7 +41,7 @@ namespace battleShip
             {
                 if (Condition[i] == false)
                 {
-                    Damage++
+                    Damage++;
                 }
             }
             if (Damage == Length)

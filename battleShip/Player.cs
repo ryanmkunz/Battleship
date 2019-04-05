@@ -7,11 +7,24 @@ namespace battleShip
 {
     public class Player
     {
-        internal Board board;
+        public Board board;
+        public Ship destroyer;
+        public Ship submarine;
+        public Ship battship;
+        public Ship carrier;
+
+        public Player()
+        {
+            board = new Board();
+            destroyer = new destroyer();
+            submarine = new submarine();
+            battship = new battShip();
+            carrier = new carrier();
+        }
 
         public void SelectTarget()
         {
-            throw new System.NotImplementedException();
+            UserInterface.DisplayTargeting();
         }
     }
 }

@@ -31,5 +31,10 @@ namespace battleShip
         {
             throw new System.NotImplementedException();
         }
+
+        public static void DisplayTargeting()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
