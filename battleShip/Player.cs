@@ -41,11 +41,11 @@ namespace battleShip
 
             board.DisplayBoard();
             battship.PlaceShip(name, "Battleship");
-            board.UpdateBoard(submarine.Position[0], int.Parse(battship.Position[1]), "B", "place");
+            board.UpdateBoard(battship.Position[0], int.Parse(battship.Position[1]), "B", "place");
 
             board.DisplayBoard();
             carrier.PlaceShip(name, "Carrier");
-            board.UpdateBoard(submarine.Position[0], int.Parse(carrier.Position[1]), "C", "place");
+            board.UpdateBoard(carrier.Position[0], int.Parse(carrier.Position[1]), "C", "place");
         }
     }
 }

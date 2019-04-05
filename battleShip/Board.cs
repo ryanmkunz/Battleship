@@ -11,6 +11,8 @@ namespace battleShip
         public string [,] GameState;
         public int BoardSize;
         public string[] alphabetArray;
+        int columnNumber;
+        int rowNumber;
 
         public Board()
         {
@@ -51,9 +53,7 @@ namespace battleShip
 
 
         public void UpdateBoard(string letterCoordinate, int numberCoordinate, string shipType, string updateType)
-        {
-            int columnNumber;
-            int rowNumber;
+        {            
             columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
             rowNumber = numberCoordinate - 1;
             switch (updateType)
