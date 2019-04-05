@@ -9,13 +9,13 @@ namespace battleShip
     public abstract class Ship
     {
         public int Length;
-        public int[] Position;
+        public string[] Position;
         public bool[] Condition;
         public int Damage;
 
         public Ship()
         {
-            Position = new int[Length];
+            Position = new string[2];
             Condition = new bool[Length];
             Damage = 0;
 
@@ -28,6 +28,8 @@ namespace battleShip
         public virtual void PlaceShip(string playerName, string shipType)
         {
             UserInterface.DisplayPlacementMenu(playerName, shipType);
+            Position[0] = Console.ReadLine();
+            Position[1] = Console.ReadLine();            
         }
 
         public bool isSunk()

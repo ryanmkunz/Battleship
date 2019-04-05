@@ -14,9 +14,8 @@ namespace battleShip
 
         public static void DisplayPlacementMenu(string playerName, string shipType)
         {
-            //pass in the ship type
             Console.WriteLine(playerName + ", please place your " + shipType);
-            Console.WriteLine("Enter coordinates");
+            Console.WriteLine("Enter coordinates (enter letter, then enter number)");
         }
 
         public static void DisplayHitMiss()

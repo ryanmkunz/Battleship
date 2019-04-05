@@ -8,17 +8,27 @@ namespace battleShip
 {
     public class Board
     {
-        public int [,] GameState;
+        public string [,] GameState;
         public int BoardSize;
+        public string[] alphabetArray;
 
         public Board()
         {
             BoardSize = 20;
-            GameState = new int[BoardSize, BoardSize];
+            GameState = new string[BoardSize, BoardSize];
+            alphabetArray = new string[26] {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+            for (int i = 0; i < BoardSize; i++)
+            {
+                for (int j = 0; j < BoardSize; j++)
+                {
+                    GameState[i, j] = " ";
+                }
+            }
         }
-
+        
         public void DisplayBoard()
         {
+            Console.Clear();
             Console.WriteLine("    A"+" B"+" C" + " D" + " E" + " F" + " G" + " H" + " I" + " J" + " K" + " L" + " M" + " N" + " O" + " P" + " Q" + " R" + " S" + " T");
             for (int i = 0; i < BoardSize; i++)
             {
@@ -39,9 +49,21 @@ namespace battleShip
             Console.ReadLine();
         }
 
-        public void UpdateBoard()
+
+        public void UpdateBoard(string letterCoordinate, int numberCoordinate, string shipType, string updateType)
         {
-            throw new System.NotImplementedException();
+            int columnNumber;
+            int rowNumber;
+            columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
+            rowNumber = numberCoordinate - 1;
+            switch (updateType)
+            {
+                case "place":
+                    GameState[columnNumber, rowNumber] = shipType;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

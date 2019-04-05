@@ -35,11 +35,11 @@ namespace battleShip
         {
             UserInterface.DisplayNamePrompt(1);
             player1.name = Console.ReadLine();            
-            UserInterface.DisplayPlacementMenu(player1.name);
             player1.PlaceShips();
-
+            //switch to player 2
             UserInterface.DisplayNamePrompt(2);
             player2.name = Console.ReadLine();
+            player2.PlaceShips();
         }
     }
 }

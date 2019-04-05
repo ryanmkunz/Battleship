@@ -31,12 +31,21 @@ namespace battleShip
 
         public void PlaceShips()
         {
-            foreach (var shipname in shipnames)
-            {
-                board.DisplayBoard();
-                destroyer.PlaceShip(name, shipname);
-                board.UpdateBoard();
-            }
+            board.DisplayBoard();
+            destroyer.PlaceShip(name, "Destroyer");
+            board.UpdateBoard(destroyer.Position[0], int.Parse(destroyer.Position[1]), "D", "place");
+
+            board.DisplayBoard();
+            submarine.PlaceShip(name, "Submarine");
+            board.UpdateBoard(submarine.Position[0], int.Parse(submarine.Position[1]), "S", "place");
+
+            board.DisplayBoard();
+            battship.PlaceShip(name, "Battleship");
+            board.UpdateBoard(submarine.Position[0], int.Parse(battship.Position[1]), "B", "place");
+
+            board.DisplayBoard();
+            carrier.PlaceShip(name, "Carrier");
+            board.UpdateBoard(submarine.Position[0], int.Parse(carrier.Position[1]), "C", "place");
         }
     }
 }
