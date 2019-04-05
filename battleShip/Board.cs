@@ -10,7 +10,8 @@ namespace battleShip
     {
         public int [,] GameState;
         public int BoardSize;
-        
+        internal Ship Ship;
+
         public Board()
         {
             BoardSize = 20;
@@ -37,6 +38,11 @@ namespace battleShip
                 Console.WriteLine("|");
             }     
             Console.ReadLine();
+        }
+
+        public void UpdateBoard()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

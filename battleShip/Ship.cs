@@ -6,29 +6,52 @@ using System.Threading.Tasks;
 
 namespace battleShip
 {
-    class Ship
+    abstract class Ship
     {
-        //variables
-        int Length;
+        public int Length;
+        public int[] Position;
+        public bool[] Condition;
+        public int Damage;
 
-        //constructor
         public Ship()
         {
+            Position = new int[Length];
+            Condition = new bool[Length];
+            Damage = 0;
 
+            for (int i = 0; i < Length; i++)
+            {
+                Condition[i] = true;
+            }
         }
 
-        public void MoveShip()
+        public virtual void MoveShip()
         {
             throw new System.NotImplementedException();
         }
 
-        public void PlaceShip()
+        public virtual void PlaceShip()
         {
             throw new System.NotImplementedException();
         }
 
-        //TODO: write a parent class for all ships (destroyer 2, submarine 3, battleship 4, carrier 5)
-
-        //methods
+        public bool isSunk()
+        {
+            for (int i = 0; i < Length; i++)
+            {
+                if (Condition[i] == false)
+                {
+                    Damage++
+                }
+            }
+            if (Damage == Length)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

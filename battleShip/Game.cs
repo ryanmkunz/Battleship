@@ -19,5 +19,15 @@ namespace battleShip
         {
             throw new System.NotImplementedException();
         }
+
+        public void CheckHitOrMiss()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SwitchTurn()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

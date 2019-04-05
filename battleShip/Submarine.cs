@@ -8,5 +8,9 @@ namespace battleShip
 {
     class Submarine : Ship
     {
+        public Submarine()
+        {
+
+        }
     }
 }

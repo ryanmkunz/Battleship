@@ -8,6 +8,10 @@ namespace battleShip
     public class Player
     {
         internal Board board;
-        internal Ship ship;
+
+        public void SelectTarget()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
