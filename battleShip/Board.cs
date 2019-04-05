@@ -52,14 +52,42 @@ namespace battleShip
         }
 
 
-        public void UpdateBoard(string letterCoordinate, int numberCoordinate, string shipType, string updateType)
+        public void UpdateBoard(string letterCoordinate, int numberCoordinate, string direction, int shipLength, string shipType, string updateType)
         {            
             columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
             rowNumber = numberCoordinate - 1;
             switch (updateType)
             {
-                case "place":
-                    GameState[rowNumber, columnNumber] = shipType;
+                case "place":                    
+                    switch (direction)
+                    {
+                        case "up":
+                            for (int i = 0; i < shipLength; i++)
+                            {
+                                GameState[rowNumber + i, columnNumber] = shipType;
+                            }
+                            break;
+                        case "down":
+                            for (int i = 1; i < shipLength; i++)
+                            {
+                                GameState[rowNumber - i, columnNumber] = shipType;
+                            }
+                            break;
+                        case "right":
+                            for (int i = 0; i < shipLength; i++)
+                            {
+                                GameState[rowNumber, columnNumber + i] = shipType;
+                            }
+                            break;
+                        case "left":
+                            for (int i = 0; i < shipLength; i++)
+                            {
+                                GameState[rowNumber, columnNumber - i] = shipType;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 default:
                     break;

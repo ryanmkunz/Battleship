@@ -15,7 +15,7 @@ namespace battleShip
         public static void DisplayPlacementMenu(string playerName, string shipType)
         {
             Console.WriteLine(playerName + ", please place your " + shipType);
-            Console.WriteLine("Enter coordinates (enter letter, then enter number)");
+            Console.WriteLine("Enter coordinates and direction (enter letter, then enter number, then 'up', 'down', 'left', or 'right')");
         }
 
         public static void DisplayHitMiss()
@@ -41,6 +41,11 @@ namespace battleShip
         {
             Console.Clear();
             Console.WriteLine("Welcome to Battleship!" + '\n' + "Enter Player " + playerNumber + " name:");
+        }
+
+        public static void DisplayCoordinatePrompt()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
