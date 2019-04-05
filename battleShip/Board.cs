@@ -59,7 +59,7 @@ namespace battleShip
             switch (updateType)
             {
                 case "place":
-                    GameState[columnNumber, rowNumber] = shipType;
+                    GameState[rowNumber, columnNumber] = shipType;
                     break;
                 default:
                     break;
