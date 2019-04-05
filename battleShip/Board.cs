@@ -23,7 +23,7 @@ namespace battleShip
             {
                 for (int j = 0; j < BoardSize; j++)
                 {
-                    GameState[i, j] = " ";
+                    GameState[i, j] = "~";
                 }
             }
         }
@@ -31,7 +31,12 @@ namespace battleShip
         public void DisplayBoard()
         {
             Console.Clear();
-            Console.WriteLine("    A"+" B"+" C" + " D" + " E" + " F" + " G" + " H" + " I" + " J" + " K" + " L" + " M" + " N" + " O" + " P" + " Q" + " R" + " S" + " T");
+            Console.Write("   ");
+            for (int i = 0; i < 20; i++)
+            {                
+                Console.Write(" " + alphabetArray[i]);
+            }
+            Console.Write('\n');           
             for (int i = 0; i < BoardSize; i++)
             {
                 if (i < 9)
@@ -48,11 +53,10 @@ namespace battleShip
                 }
                 Console.WriteLine("|");
             }     
-            Console.ReadLine();
         }
 
 
-        public void UpdateBoard(string letterCoordinate, int numberCoordinate, string direction, int shipLength, string shipType, string updateType)
+        public void UpdateBoard(string letterCoordinate, int numberCoordinate, string updateType, string direction = "", int shipLength = 0, string shipType = "")
         {            
             columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
             rowNumber = numberCoordinate - 1;
@@ -64,13 +68,13 @@ namespace battleShip
                         case "up":
                             for (int i = 0; i < shipLength; i++)
                             {
-                                GameState[rowNumber + i, columnNumber] = shipType;
+                                GameState[rowNumber - i, columnNumber] = shipType;
                             }
                             break;
                         case "down":
-                            for (int i = 1; i < shipLength; i++)
+                            for (int i = 0; i < shipLength; i++)
                             {
-                                GameState[rowNumber - i, columnNumber] = shipType;
+                                GameState[rowNumber + i, columnNumber] = shipType;
                             }
                             break;
                         case "right":
@@ -88,6 +92,14 @@ namespace battleShip
                         default:
                             break;
                     }
+                    break;
+                case "shoot":
+                    if (GameState[rowNumber, columnNumber] == "D" || GameState[rowNumber, columnNumber] == "S" || GameState[rowNumber, columnNumber] == "B"
+                        || GameState[rowNumber, columnNumber] == "C")
+                    {
+                        //change the condition of that index of that ship to false;
+                    }
+                    GameState[rowNumber, columnNumber] = "X";
                     break;
                 default:
                     break;

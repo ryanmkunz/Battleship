@@ -8,44 +8,50 @@ namespace battleShip
     public class Player
     {
         public string name;
-        public List<string> shipnames = new List<string>() { "Destroyer", "Submarine", "Battleship", "Carrier" };
+        public List<string> shipnames;
         public Board board;
         public destroyer destroyer;
         public submarine submarine;
         public battShip battship;
         public carrier carrier;
+        public string[] targetCoordinates;
 
         public Player()
         {
+            shipnames = new List<string>() { "Destroyer", "Submarine", "Battleship", "Carrier" };
             board = new Board();
             destroyer = new destroyer();
             submarine = new submarine();
             battship = new battShip();
             carrier = new carrier();
+            targetCoordinates = new string[2];
         }
 
         public void SelectTarget()
         {
             UserInterface.DisplayTargeting();
+            targetCoordinates[0] = Console.ReadLine();
+            targetCoordinates[1] = Console.ReadLine();
         }
 
         public void PlaceShips()
         {
             board.DisplayBoard();
             destroyer.PlaceShip(name, "Destroyer");
-            board.UpdateBoard(destroyer.Position[0], int.Parse(destroyer.Position[1]), destroyer.Position[2], "D", "place");            
+            board.UpdateBoard(destroyer.Position[0], int.Parse(destroyer.Position[1]), "place", destroyer.Position[2], destroyer.Length, "D");            
 
             board.DisplayBoard();
             submarine.PlaceShip(name, "Submarine");
-            board.UpdateBoard(submarine.Position[0], int.Parse(submarine.Position[1]), submarine.Position[2], "S", "place");
+            board.UpdateBoard(submarine.Position[0], int.Parse(submarine.Position[1]), "place", submarine.Position[2], submarine.Length, "S");
 
             board.DisplayBoard();
             battship.PlaceShip(name, "Battleship");
-            board.UpdateBoard(battship.Position[0], int.Parse(battship.Position[1]), battship.Position[2], "B", "place");
+            board.UpdateBoard(battship.Position[0], int.Parse(battship.Position[1]), "place", battship.Position[2], battship.Length, "B");
 
             board.DisplayBoard();
             carrier.PlaceShip(name, "Carrier");
-            board.UpdateBoard(carrier.Position[0], int.Parse(carrier.Position[1]), carrier.Position[2], "C", "place");
+            board.UpdateBoard(carrier.Position[0], int.Parse(carrier.Position[1]), "place", carrier.Position[2], carrier.Length, "C");
+            board.DisplayBoard();
         }
     }
 }

@@ -21,9 +21,10 @@ namespace battleShip
             GameSetUp();
         }
 
-        public void CheckHitOrMiss()
+        public void OkHaveANapThenFireMissiles(Player player, Player otherPlayer)
         {
-            throw new System.NotImplementedException();
+            player.SelectTarget();
+            
         }
 
         public void SwitchTurn()
@@ -36,10 +37,15 @@ namespace battleShip
             UserInterface.DisplayNamePrompt(1);
             player1.name = Console.ReadLine();            
             player1.PlaceShips();
-            //switch to player 2
+            do
+            {
+                UserInterface.DisplaySwitchTurn();
+                UserInterface.StringInput = Console.ReadLine();
+            } while (UserInterface.StringInput != "yes");
             UserInterface.DisplayNamePrompt(2);
             player2.name = Console.ReadLine();
             player2.PlaceShips();
+            OkHaveANapThenFireMissiles(player2, player1);
         }
     }
 }

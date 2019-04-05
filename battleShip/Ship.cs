@@ -15,7 +15,7 @@ namespace battleShip
 
         public Ship()
         {
-            Position = new string[2];
+            Position = new string[3];
             Condition = new bool[Length];
             Damage = 0;
 
@@ -29,7 +29,8 @@ namespace battleShip
         {
             UserInterface.DisplayPlacementMenu(playerName, shipType);
             Position[0] = Console.ReadLine();
-            Position[1] = Console.ReadLine();            
+            Position[1] = Console.ReadLine();
+            Position[2] = Console.ReadLine();
         }
 
         public bool isSunk()

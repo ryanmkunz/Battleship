@@ -7,13 +7,16 @@ namespace battleShip
 {
     public static class UserInterface
     {
+        public static string StringInput;
+
         public static void DisplayGameOver()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Game over!");
         }
 
         public static void DisplayPlacementMenu(string playerName, string shipType)
         {
+            Console.Write('\n');
             Console.WriteLine(playerName + ", please place your " + shipType);
             Console.WriteLine("Enter coordinates and direction (enter letter, then enter number, then 'up', 'down', 'left', or 'right')");
         }
@@ -25,7 +28,8 @@ namespace battleShip
 
         public static void DisplaySwitchTurn()
         {
-            throw new System.NotImplementedException();
+            Console.Clear();
+            Console.WriteLine("Time to switch, enter 'yes' when other player is ready");
         }
 
         public static void DisplayShipSunk()
@@ -35,17 +39,17 @@ namespace battleShip
 
         public static void DisplayTargeting()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Enter coordinates (enter letter, then enter number)");
         }
         public static void DisplayNamePrompt(int playerNumber)
         {
             Console.Clear();
-            Console.WriteLine("Welcome to Battleship!" + '\n' + "Enter Player " + playerNumber + " name:");
+            Console.WriteLine("Welcome to Battleship!" + '\n' + '\n' + "Enter Player " + playerNumber + " name:");
         }
 
         public static void DisplayCoordinatePrompt()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("Enter coordinates (enter letter, then enter number)");
         }
     }
 }
