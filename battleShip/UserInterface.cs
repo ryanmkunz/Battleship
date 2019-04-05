@@ -12,10 +12,11 @@ namespace battleShip
             throw new System.NotImplementedException();
         }
 
-        public static void DisplayPlacementMenu()
+        public static void DisplayPlacementMenu(string playerName, string shipType)
         {
             //pass in the ship type
-            Console.WriteLine("Please place your ships");
+            Console.WriteLine(playerName + ", please place your " + shipType);
+            Console.WriteLine("Enter coordinates");
         }
 
         public static void DisplayHitMiss()
@@ -37,15 +38,10 @@ namespace battleShip
         {
             throw new System.NotImplementedException();
         }
-
-        public static void DisplayWelcome()
-        {
-            Console.WriteLine("Welcome to Battleship!");
-        }
-
         public static void DisplayNamePrompt(int playerNumber)
         {
-            Console.WriteLine("Enter Player " + playerNumber + " name:");
+            Console.Clear();
+            Console.WriteLine("Welcome to Battleship!" + '\n' + "Enter Player " + playerNumber + " name:");
         }
     }
 }

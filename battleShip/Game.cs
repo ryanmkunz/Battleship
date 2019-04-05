@@ -18,12 +18,7 @@ namespace battleShip
 
         public void RunGame()
         {
-            UserInterface.DisplayWelcome();
-            UserInterface.DisplayNamePrompt(1);
-            player1.name = Console.ReadLine();
-            UserInterface.DisplayNamePrompt(2);
-            player2.name = Console.ReadLine();
-            UserInterface.DisplayPlacementMenu();
+            GameSetUp();
         }
 
         public void CheckHitOrMiss()
@@ -34,6 +29,17 @@ namespace battleShip
         public void SwitchTurn()
         {
             throw new System.NotImplementedException();
+        }
+
+        public void GameSetUp()
+        {
+            UserInterface.DisplayNamePrompt(1);
+            player1.name = Console.ReadLine();            
+            UserInterface.DisplayPlacementMenu(player1.name);
+            player1.PlaceShips();
+
+            UserInterface.DisplayNamePrompt(2);
+            player2.name = Console.ReadLine();
         }
     }
 }

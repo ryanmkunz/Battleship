@@ -10,7 +10,6 @@ namespace battleShip
     {
         public int [,] GameState;
         public int BoardSize;
-        internal Ship Ship;
 
         public Board()
         {

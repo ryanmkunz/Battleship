@@ -8,11 +8,12 @@ namespace battleShip
     public class Player
     {
         public string name;
+        public List<string> shipnames = new List<string>() { "Destroyer", "Submarine", "Battleship", "Carrier" };
         public Board board;
-        public Ship destroyer;
-        public Ship submarine;
-        public Ship battship;
-        public Ship carrier;
+        public destroyer destroyer;
+        public submarine submarine;
+        public battShip battship;
+        public carrier carrier;
 
         public Player()
         {
@@ -30,7 +31,12 @@ namespace battleShip
 
         public void PlaceShips()
         {
-            throw new System.NotImplementedException();
+            foreach (var shipname in shipnames)
+            {
+                board.DisplayBoard();
+                destroyer.PlaceShip(name, shipname);
+                board.UpdateBoard();
+            }
         }
     }
 }

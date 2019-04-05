@@ -25,9 +25,9 @@ namespace battleShip
             }
         }
 
-        public virtual void PlaceShip()
+        public virtual void PlaceShip(string playerName, string shipType)
         {
-            throw new System.NotImplementedException();
+            UserInterface.DisplayPlacementMenu(playerName, shipType);
         }
 
         public bool isSunk()
