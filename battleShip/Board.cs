@@ -85,7 +85,7 @@ namespace battleShip
         }
 
 
-        public void UpdateBoard(string letterCoordinate, int numberCoordinate, string updateType, string direction = "", int shipLength = 0, string shipType = "")
+        public void UpdateBoard(Player player, Player enemyPlayer, string letterCoordinate, int numberCoordinate, string updateType, string direction = "", int shipLength = 0, string shipType = "")
         {            
             columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
             rowNumber = numberCoordinate - 1;
@@ -123,12 +123,13 @@ namespace battleShip
                     }
                     break;
                 case "shoot":
-                    if (EnemyGameState[rowNumber, columnNumber] == "D" || EnemyGameState[rowNumber, columnNumber] == "S" || EnemyGameState[rowNumber, columnNumber] == "B"
-                        || EnemyGameState[rowNumber, columnNumber] == "C")
+                    if (enemyPlayer.board.GameState[rowNumber, columnNumber] == "D" || enemyPlayer.board.GameState[rowNumber, columnNumber] == "S" || enemyPlayer.board.GameState[rowNumber, columnNumber] == "B"
+                        || enemyPlayer.board.GameState[rowNumber, columnNumber] == "C")
                     {
                         //change the condition of that index of that ship to false;
                     }
                     EnemyGameState[rowNumber, columnNumber] = "X";
+                    enemyPlayer.board.GameState[rowNumber, columnNumber] = "X";
                     break;
                 default:
                     break;

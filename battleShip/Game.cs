@@ -18,16 +18,20 @@ namespace battleShip
 
         public void RunGame()
         {
-            GameSetUp();
+            GameSetUp(player1, player2);
             OkHaveANapThenFireMissiles(player2, player1);
         }
 
-        public void OkHaveANapThenFireMissiles(Player player, Player otherPlayer)
+        public void OkHaveANapThenFireMissiles(Player player, Player enemyPlayer)
         {
-            player.SelectTarget();
+            player.SelectTarget(player, enemyPlayer);
+            if (enemyPlayer.destroyer.isSunk() && enemyPlayer.submarine.isSunk() && enemyPlayer.battship.isSunk() && enemyPlayer.carrier.isSunk())
+            {
+                UserInterface.DisplayGameOver();
+            }
             Delay();
             SwitchTurn();
-            OkHaveANapThenFireMissiles(otherPlayer, player);                                                                
+            OkHaveANapThenFireMissiles(enemyPlayer, player);                                                                
         }
 
         public void Delay()
@@ -47,16 +51,16 @@ namespace battleShip
             } while (UserInterface.StringInput != "yes");
         }
 
-        public void GameSetUp()
+        public void GameSetUp(Player player, Player enemyPlayer)
         {
             UserInterface.DisplayNamePrompt(1);
             player1.name = UserInterface.GetUserInput();            
-            player1.PlaceShips();
+            player1.PlaceShips(player, enemyPlayer);
             Delay();
             SwitchTurn();
             UserInterface.DisplayNamePrompt(2);
             player2.name = UserInterface.GetUserInput();
-            player2.PlaceShips();
+            player2.PlaceShips(player, enemyPlayer);
         }
     }
 }
