@@ -14,6 +14,7 @@ namespace battleShip
         public string[] alphabetArray;
         int columnNumber;
         int rowNumber;
+        public List<string> PastTargets;
 
         public Board()
         {
@@ -89,6 +90,7 @@ namespace battleShip
         {            
             columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
             rowNumber = numberCoordinate - 1;
+           
             switch (updateType)
             {
                 case "place":                    
@@ -98,24 +100,28 @@ namespace battleShip
                             for (int i = 0; i < shipLength; i++)
                             {
                                 GameState[rowNumber - i, columnNumber] = shipType;
+                                enemyPlayer.board.EnemyGameState[rowNumber - i, columnNumber] = shipType;
                             }
                             break;
                         case "down":
                             for (int i = 0; i < shipLength; i++)
                             {
                                 GameState[rowNumber + i, columnNumber] = shipType;
+                                //enemyPlayer.board.EnemyGameState[rowNumber + i, columnNumber] = shipType;
                             }
                             break;
                         case "right":
                             for (int i = 0; i < shipLength; i++)
                             {
                                 GameState[rowNumber, columnNumber + i] = shipType;
+                                //enemyPlayer.board.EnemyGameState[rowNumber, columnNumber + i] = shipType;
                             }
                             break;
                         case "left":
                             for (int i = 0; i < shipLength; i++)
                             {
                                 GameState[rowNumber, columnNumber - i] = shipType;
+                                //enemyPlayer.board.EnemyGameState[rowNumber, columnNumber - i] = shipType;
                             }
                             break;
                         default:
@@ -126,9 +132,11 @@ namespace battleShip
                     if (enemyPlayer.board.GameState[rowNumber, columnNumber] == "D" || enemyPlayer.board.GameState[rowNumber, columnNumber] == "S" || enemyPlayer.board.GameState[rowNumber, columnNumber] == "B"
                         || enemyPlayer.board.GameState[rowNumber, columnNumber] == "C")
                     {
-                        //change the condition of that index of that ship to false;
+                        //make a list of previously selected targets and make sure new target is not in list
+                        //if not on list already, check for ship, and increment damage.
+                        //dont attribute damage to a ship, just have a total amount of damage a player can sustain based on the total lengths of all ships.
                     }
-                    EnemyGameState[rowNumber, columnNumber] = "X";
+                    player.board.EnemyGameState[rowNumber, columnNumber] = "X";
                     enemyPlayer.board.GameState[rowNumber, columnNumber] = "X";
                     break;
                 default:

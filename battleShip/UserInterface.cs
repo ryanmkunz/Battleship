@@ -9,9 +9,9 @@ namespace battleShip
     {
         public static string StringInput;
 
-        public static void DisplayGameOver()
+        public static void DisplayGameOver(string name)
         {
-            Console.WriteLine("Game over!");
+            Console.WriteLine("Game over, " + name + " wins!");
         }
 
         public static void DisplayPlacementMenu(string playerName, string shipType)

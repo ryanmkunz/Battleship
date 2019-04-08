@@ -16,6 +16,7 @@ namespace battleShip
         public battShip battship;
         public carrier carrier;
         public string[] targetCoordinates;
+        public int damage;
 
         public Player()
         {
@@ -27,6 +28,7 @@ namespace battleShip
             battship = new battShip();
             carrier = new carrier();
             targetCoordinates = new string[2];
+            damage = destroyer.Length + submarine.Length + battship.Length + carrier.Length;
         }
 
         public void SelectTarget(Player player, Player enemyPlayer)

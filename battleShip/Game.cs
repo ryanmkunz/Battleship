@@ -25,9 +25,9 @@ namespace battleShip
         public void OkHaveANapThenFireMissiles(Player player, Player enemyPlayer)
         {
             player.SelectTarget(player, enemyPlayer);
-            if (enemyPlayer.destroyer.isSunk() && enemyPlayer.submarine.isSunk() && enemyPlayer.battship.isSunk() && enemyPlayer.carrier.isSunk())
+            if (enemyPlayer.damage == 0)
             {
-                UserInterface.DisplayGameOver();
+                UserInterface.DisplayGameOver(player.name);
             }
             Delay();
             SwitchTurn();
