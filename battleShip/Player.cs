@@ -16,6 +16,7 @@ namespace battleShip
         public battShip battship;
         public carrier carrier;
         public string[] targetCoordinates;
+        public List<string> PastTargets;
         public int damage;
 
         public Player()
@@ -28,6 +29,7 @@ namespace battleShip
             battship = new battShip();
             carrier = new carrier();
             targetCoordinates = new string[2];
+            PastTargets = new List<string>();
             damage = destroyer.Length + submarine.Length + battship.Length + carrier.Length;
         }
 
@@ -37,6 +39,16 @@ namespace battleShip
             UserInterface.DisplayTargeting();
             targetCoordinates[0] = UserInterface.GetUserInput().ToUpper();
             targetCoordinates[1] = UserInterface.GetUserInput();
+            string coordinates = ("" + targetCoordinates[0] + targetCoordinates[1]);
+            if (PastTargets.Contains(coordinates))
+            {
+                //print message
+                SelectTarget(player, enemyPlayer);
+            }
+            else
+            {
+                PastTargets.Add(coordinates);
+            }            
             opponentBoard.UpdateBoard(player, enemyPlayer, targetCoordinates[0], int.Parse(targetCoordinates[1]), "shoot");
             board.DisplayBoard();
         }

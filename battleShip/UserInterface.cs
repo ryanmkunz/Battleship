@@ -21,20 +21,22 @@ namespace battleShip
             Console.WriteLine("Enter coordinates and direction (enter letter, then enter number, then 'up', 'down', 'left', or 'right')");
         }
 
-        public static void DisplayHitMiss()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public static void DisplaySwitchTurn()
         {
             Console.Clear();
             Console.WriteLine("Time to switch, enter 'yes' when other player is ready");
         }
 
-        public static void DisplayShipSunk()
+        public static void DisplayHitOrMiss(string hitMiss)
         {
-            throw new System.NotImplementedException();
+            if (hitMiss == "hit")
+            {
+                Console.WriteLine("Hit");
+            }
+            else
+            {
+                Console.WriteLine("Miss");
+            }
         }
 
         public static void DisplayTargeting()
