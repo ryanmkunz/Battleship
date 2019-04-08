@@ -30,7 +30,7 @@ namespace battleShip
         public void SelectTarget()
         {
             UserInterface.DisplayTargeting();
-            targetCoordinates[0] = Console.ReadLine();
+            targetCoordinates[0] = Console.ReadLine().ToUpper();
             targetCoordinates[1] = Console.ReadLine();
             board.UpdateBoard(targetCoordinates[0], int.Parse(targetCoordinates[1]), "fire");
             board.DisplayBoard();
@@ -41,19 +41,19 @@ namespace battleShip
         {
             board.DisplayBoard();
             destroyer.PlaceShip(name, "Destroyer");
-            board.UpdateBoard(destroyer.Position[0], int.Parse(destroyer.Position[1]), "place", destroyer.Position[2], destroyer.Length, "D");            
+            board.UpdateBoard(destroyer.Position[0].ToUpper(), int.Parse(destroyer.Position[1]), "place", destroyer.Position[2], destroyer.Length, "D");            
 
             board.DisplayBoard();
             submarine.PlaceShip(name, "Submarine");
-            board.UpdateBoard(submarine.Position[0], int.Parse(submarine.Position[1]), "place", submarine.Position[2], submarine.Length, "S");
+            board.UpdateBoard(submarine.Position[0].ToUpper(), int.Parse(submarine.Position[1]), "place", submarine.Position[2], submarine.Length, "S");
 
             board.DisplayBoard();
             battship.PlaceShip(name, "Battleship");
-            board.UpdateBoard(battship.Position[0], int.Parse(battship.Position[1]), "place", battship.Position[2], battship.Length, "B");
+            board.UpdateBoard(battship.Position[0].ToUpper(), int.Parse(battship.Position[1]), "place", battship.Position[2], battship.Length, "B");
 
             board.DisplayBoard();
             carrier.PlaceShip(name, "Carrier");
-            board.UpdateBoard(carrier.Position[0], int.Parse(carrier.Position[1]), "place", carrier.Position[2], carrier.Length, "C");
+            board.UpdateBoard(carrier.Position[0].ToUpper(), int.Parse(carrier.Position[1]), "place", carrier.Position[2], carrier.Length, "C");
             board.DisplayBoard();
         }
     }

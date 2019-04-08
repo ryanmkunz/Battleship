@@ -19,6 +19,7 @@ namespace battleShip
         public void RunGame()
         {
             GameSetUp();
+            OkHaveANapThenFireMissiles(player2, player1);
         }
 
         public void OkHaveANapThenFireMissiles(Player player, Player otherPlayer)
@@ -45,7 +46,7 @@ namespace battleShip
             UserInterface.DisplayNamePrompt(2);
             player2.name = Console.ReadLine();
             player2.PlaceShips();
-            OkHaveANapThenFireMissiles(player2, player1);
+            
         }
     }
 }
