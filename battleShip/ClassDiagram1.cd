@@ -3,7 +3,7 @@
   <Class Name="battleShip.Board">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACEAAAAAAAAAAAAAgAAAAAAAAAAJAAAAAAAAAAAAJAA=</HashCode>
+      <HashCode>ACEAAAAAAAAAAAAAgAAAAACAAAAJAAAAAAAAAAAAJAA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -78,7 +78,7 @@
   <Class Name="battleShip.Game">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wEAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAQAAAAAAAA=</HashCode>
+      <HashCode>wEAAAAAAAAAAAAAAABAAAAAAAAAIAAAACAQAAAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -91,7 +91,7 @@
       <Path>
         <Point X="2.25" Y="4.586" />
         <Point X="4" Y="4.586" />
-        <Point X="4" Y="3.209" />
+        <Point X="4" Y="3.401" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="destroyer" Type="battleShip.destroyer" FixedFromPoint="true">
@@ -120,7 +120,7 @@
   <Class Name="battleShip.UserInterface">
     <Position X="6.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AQBAAAgIICAAAAAAAAAAAAAAABAAABAAAAIAAAAAABA=</HashCode>
+      <HashCode>AQBAAAoIICAAAAAAAAAAAAAAABAAABAAAAIAAAAAABA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Class>

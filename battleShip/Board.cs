@@ -39,11 +39,17 @@ namespace battleShip
         
         public void DisplayBoard()
         {
+            //probably move this to the userinterface class
             Console.Clear();
-            Console.WriteLine("Player");
+            Console.WriteLine("    Player                                       Enemy");
             Console.Write("   ");
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < BoardSize; i++)
             {                
+                Console.Write(" " + alphabetArray[i]);
+            }
+            Console.Write('\t');
+            for (int i = 0; i < BoardSize; i++)
+            {
                 Console.Write(" " + alphabetArray[i]);
             }
             Console.Write('\n');           
@@ -60,6 +66,19 @@ namespace battleShip
                 for (int j = 0; j < BoardSize; j++)
                 {
                     Console.Write("|" + GameState[i, j]);
+                }
+                Console.Write("|");
+                if (i < 9)
+                {
+                    Console.Write("   " + (i + 1));
+                }
+                else
+                {
+                    Console.Write("  " + (i + 1));
+                }
+                for (int j = 0; j < BoardSize; j++)
+                {
+                    Console.Write("|" + EnemyGameState[i, j]);
                 }
                 Console.WriteLine("|");
             }     
@@ -104,12 +123,12 @@ namespace battleShip
                     }
                     break;
                 case "shoot":
-                    if (GameState[rowNumber, columnNumber] == "D" || GameState[rowNumber, columnNumber] == "S" || GameState[rowNumber, columnNumber] == "B"
-                        || GameState[rowNumber, columnNumber] == "C")
+                    if (EnemyGameState[rowNumber, columnNumber] == "D" || EnemyGameState[rowNumber, columnNumber] == "S" || EnemyGameState[rowNumber, columnNumber] == "B"
+                        || EnemyGameState[rowNumber, columnNumber] == "C")
                     {
                         //change the condition of that index of that ship to false;
                     }
-                    GameState[rowNumber, columnNumber] = "X";
+                    EnemyGameState[rowNumber, columnNumber] = "X";
                     break;
                 default:
                     break;

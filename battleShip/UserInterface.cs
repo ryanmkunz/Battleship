@@ -53,6 +53,11 @@ namespace battleShip
             Console.WriteLine("Enter coordinates (enter letter, then enter number)");
         }
 
+        public static void DisplayAreYouReady()
+        {
+            Console.WriteLine("Ready to continue?");
+        }
+
         public static string GetUserInput()
         {
             StringInput = Console.ReadLine();

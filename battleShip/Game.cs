@@ -25,12 +25,26 @@ namespace battleShip
         public void OkHaveANapThenFireMissiles(Player player, Player otherPlayer)
         {
             player.SelectTarget();
-            
+            Delay();
+            SwitchTurn();
+            OkHaveANapThenFireMissiles(otherPlayer, player);                                                                
         }
 
+        public void Delay()
+        {
+            do
+            {
+                UserInterface.DisplayAreYouReady();
+                UserInterface.StringInput = UserInterface.GetUserInput();
+            } while (UserInterface.StringInput != "yes");
+        }
         public void SwitchTurn()
         {
-            throw new System.NotImplementedException();
+            do
+            {
+                UserInterface.DisplaySwitchTurn();
+                UserInterface.StringInput = UserInterface.GetUserInput();
+            } while (UserInterface.StringInput != "yes");
         }
 
         public void GameSetUp()
@@ -38,15 +52,11 @@ namespace battleShip
             UserInterface.DisplayNamePrompt(1);
             player1.name = UserInterface.GetUserInput();            
             player1.PlaceShips();
-            do
-            {
-                UserInterface.DisplaySwitchTurn();
-                UserInterface.StringInput = UserInterface.GetUserInput();
-            } while (UserInterface.StringInput != "yes");
+            Delay();
+            SwitchTurn();
             UserInterface.DisplayNamePrompt(2);
             player2.name = UserInterface.GetUserInput();
             player2.PlaceShips();
-            
         }
     }
 }
