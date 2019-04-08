@@ -39,7 +39,8 @@ namespace battleShip
 
         public static void DisplayTargeting()
         {
-            Console.WriteLine("Enter coordinates (enter letter, then enter number)");
+            //include this in DisplayCoordinatePrompt() 
+            Console.WriteLine("Enter target coordinates (enter letter, then enter number)");
         }
         public static void DisplayNamePrompt(int playerNumber)
         {

@@ -32,7 +32,7 @@ namespace battleShip
             UserInterface.DisplayTargeting();
             targetCoordinates[0] = Console.ReadLine().ToUpper();
             targetCoordinates[1] = Console.ReadLine();
-            board.UpdateBoard(targetCoordinates[0], int.Parse(targetCoordinates[1]), "fire");
+            board.UpdateBoard(targetCoordinates[0], int.Parse(targetCoordinates[1]), "shoot");
             board.DisplayBoard();
             Console.ReadLine();
         }
