@@ -36,15 +36,15 @@ namespace battleShip
         public void GameSetUp()
         {
             UserInterface.DisplayNamePrompt(1);
-            player1.name = Console.ReadLine();            
+            player1.name = UserInterface.GetUserInput();            
             player1.PlaceShips();
             do
             {
                 UserInterface.DisplaySwitchTurn();
-                UserInterface.StringInput = Console.ReadLine();
+                UserInterface.StringInput = UserInterface.GetUserInput();
             } while (UserInterface.StringInput != "yes");
             UserInterface.DisplayNamePrompt(2);
-            player2.name = Console.ReadLine();
+            player2.name = UserInterface.GetUserInput();
             player2.PlaceShips();
             
         }

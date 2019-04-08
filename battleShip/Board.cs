@@ -9,6 +9,7 @@ namespace battleShip
     public class Board
     {
         public string [,] GameState;
+        public string[,] EnemyGameState;
         public int BoardSize;
         public string[] alphabetArray;
         int columnNumber;
@@ -26,11 +27,20 @@ namespace battleShip
                     GameState[i, j] = "~";
                 }
             }
+            EnemyGameState = new string[BoardSize, BoardSize];
+            for (int i = 0; i < BoardSize; i++)
+            {
+                for (int j = 0; j < BoardSize; j++)
+                {
+                    EnemyGameState[i, j] = "~";
+                }                
+            }
         }
         
         public void DisplayBoard()
         {
             Console.Clear();
+            Console.WriteLine("Player");
             Console.Write("   ");
             for (int i = 0; i < 20; i++)
             {                

@@ -10,6 +10,7 @@ namespace battleShip
         public string name;
         public List<string> shipnames;
         public Board board;
+        public Board opponentBoard;
         public destroyer destroyer;
         public submarine submarine;
         public battShip battship;
@@ -20,6 +21,7 @@ namespace battleShip
         {
             shipnames = new List<string>() { "Destroyer", "Submarine", "Battleship", "Carrier" };
             board = new Board();
+            opponentBoard = new Board();
             destroyer = new destroyer();
             submarine = new submarine();
             battship = new battShip();
