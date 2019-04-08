@@ -29,19 +29,11 @@ namespace battleShip
             {
                 UserInterface.DisplayGameOver(player.name);
             }
-            Delay();
+            UserInterface.Delay();
             SwitchTurn();
             OkHaveANapThenFireMissiles(enemyPlayer, player);                                                                
         }
-
-        public void Delay()
-        {
-            do
-            {
-                UserInterface.DisplayAreYouReady();
-                UserInterface.StringInput = UserInterface.GetUserInput();
-            } while (UserInterface.StringInput != "yes");
-        }
+        
         public void SwitchTurn()
         {
             do
@@ -56,7 +48,7 @@ namespace battleShip
             UserInterface.DisplayNamePrompt(1);
             player1.name = UserInterface.GetUserInput();            
             player1.PlaceShips(player, enemyPlayer);
-            Delay();
+            UserInterface.Delay();
             SwitchTurn();
             UserInterface.DisplayNamePrompt(2);
             player2.name = UserInterface.GetUserInput();

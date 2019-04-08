@@ -129,10 +129,12 @@ namespace battleShip
                     {
                         enemyPlayer.damage--;
                         UserInterface.DisplayHitOrMiss("hit");
+                        UserInterface.Delay();
                     }
                     else
                     {
                         UserInterface.DisplayHitOrMiss("miss");
+                        UserInterface.Delay();
                     }
                     player.board.EnemyGameState[rowNumber, columnNumber] = "X";
                     enemyPlayer.board.GameState[rowNumber, columnNumber] = "X";

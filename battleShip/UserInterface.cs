@@ -65,5 +65,13 @@ namespace battleShip
             StringInput = Console.ReadLine();
             return StringInput;
         }
+        public static void Delay()
+        {
+            do
+            {
+                DisplayAreYouReady();
+                StringInput = GetUserInput();
+            } while (StringInput != "yes");
+        }
     }
 }
