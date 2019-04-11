@@ -11,7 +11,7 @@ namespace battleShip
         public string [,] GameState;
         public string[,] EnemyGameState;
         public int BoardSize;
-        public string[] alphabetArray;
+        //public string[] alphabetArray = new string[26] {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
         int columnNumber;
         int rowNumber;        
 
@@ -19,7 +19,7 @@ namespace battleShip
         {
             BoardSize = 20;
             GameState = new string[BoardSize, BoardSize];
-            alphabetArray = new string[26] {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+            //alphabetArray = new string[26] {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
             for (int i = 0; i < BoardSize; i++)
             {
                 for (int j = 0; j < BoardSize; j++)
@@ -45,12 +45,12 @@ namespace battleShip
             Console.Write("   ");
             for (int i = 0; i < BoardSize; i++)
             {                
-                Console.Write(" " + alphabetArray[i]);
+                Console.Write(" " + UserInterface.alphabetArray[i]);
             }
             Console.Write('\t');
             for (int i = 0; i < BoardSize; i++)
             {
-                Console.Write(" " + alphabetArray[i]);
+                Console.Write(" " + UserInterface.alphabetArray[i]);
             }
             Console.Write('\n');           
             for (int i = 0; i < BoardSize; i++)
@@ -87,7 +87,7 @@ namespace battleShip
 
         public void UpdateBoard(Player player, Player enemyPlayer, string letterCoordinate, int numberCoordinate, string updateType, string direction = "", int shipLength = 0, string shipType = "")
         {            
-            columnNumber = Array.IndexOf(alphabetArray, letterCoordinate);
+            columnNumber = Array.IndexOf(UserInterface.alphabetArray, letterCoordinate);
             rowNumber = numberCoordinate - 1;
            
             switch (updateType)

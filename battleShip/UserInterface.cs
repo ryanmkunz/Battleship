@@ -7,6 +7,7 @@ namespace battleShip
 {
     public static class UserInterface
     {
+        public static string[] alphabetArray = new string[26] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         public static string StringInput;
 
         public static void DisplayGameOver(string name)
@@ -81,9 +82,23 @@ namespace battleShip
             switch (validationType)
             {
                 case "char":
-                    return true;
+                    if (alphabetArray.Contains(inputString))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 case "int":
-                    return true;
+                    if (int.TryParse(inputString, out int result))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }                 
                 case "string":
                     return true;
                 case "yesNo":

@@ -48,6 +48,10 @@ namespace battleShip
             UserInterface.DisplayTargeting();
             targetCoordinates[0] = UserInterface.GetUserInput().ToUpper();
             targetCoordinates[1] = UserInterface.GetUserInput();
+            if (!UserInterface.InputValidation(targetCoordinates[0], "char") || !UserInterface.InputValidation(targetCoordinates[1], "int"))
+            {
+                SelectTarget(player, enemyPlayer);
+            }
             string coordinates = ("" + targetCoordinates[0] + targetCoordinates[1]);
             if (PastTargets.Contains(coordinates))
             {                

@@ -31,6 +31,10 @@ namespace battleShip
             Position[0] = UserInterface.GetUserInput();
             Position[1] = UserInterface.GetUserInput();
             Position[2] = UserInterface.GetUserInput();
+            if (!UserInterface.InputValidation(Position[0], "char") || !UserInterface.InputValidation(Position[1], "int") || !UserInterface.InputValidation(Position[2], "string"))
+            {
+                PlaceShip(playerName, shipType);
+            }
         }
 
         public bool isSunk()
