@@ -28,6 +28,7 @@ namespace battleShip
             if (enemyPlayer.damage == 0)
             {
                 UserInterface.DisplayGameOver(player.name);
+                Environment.Exit(0);
             }
             UserInterface.Delay();
             SwitchTurn();
@@ -42,16 +43,14 @@ namespace battleShip
                 UserInterface.StringInput = UserInterface.GetUserInput();
             } while (UserInterface.StringInput != "yes");
         }
-
+        
         public void GameSetUp(Player player, Player enemyPlayer)
         {
-            UserInterface.DisplayNamePrompt(1);
-            player1.name = UserInterface.GetUserInput();            
+            player1.GetPlayerName(1, player1);
             player1.PlaceShips(player, enemyPlayer);
             UserInterface.Delay();
             SwitchTurn();
-            UserInterface.DisplayNamePrompt(2);
-            player2.name = UserInterface.GetUserInput();
+            enemyPlayer.GetPlayerName(2, player2);
             player2.PlaceShips(player, enemyPlayer);
         }
     }

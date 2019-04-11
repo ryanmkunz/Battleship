@@ -33,6 +33,15 @@ namespace battleShip
             damage = destroyer.Length + submarine.Length + battship.Length + carrier.Length;
         }
 
+        public void GetPlayerName(int playerNumber, Player player)
+        {
+            do
+            {
+                UserInterface.DisplayNamePrompt(playerNumber);
+                name = UserInterface.GetUserInput();
+            } while (!UserInterface.InputValidation(name, "string"));
+        }
+
         public void SelectTarget(Player player, Player enemyPlayer)
         {
             board.DisplayBoard();
@@ -41,8 +50,7 @@ namespace battleShip
             targetCoordinates[1] = UserInterface.GetUserInput();
             string coordinates = ("" + targetCoordinates[0] + targetCoordinates[1]);
             if (PastTargets.Contains(coordinates))
-            {
-                //print message
+            {                
                 SelectTarget(player, enemyPlayer);
             }
             else

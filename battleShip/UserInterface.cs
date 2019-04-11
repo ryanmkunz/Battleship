@@ -12,6 +12,7 @@ namespace battleShip
         public static void DisplayGameOver(string name)
         {
             Console.WriteLine("Game over, " + name + " wins!");
+            Console.ReadLine();
         }
 
         public static void DisplayPlacementMenu(string playerName, string shipType)
@@ -65,6 +66,7 @@ namespace battleShip
             StringInput = Console.ReadLine();
             return StringInput;
         }
+
         public static void Delay()
         {
             do
@@ -72,6 +74,23 @@ namespace battleShip
                 DisplayAreYouReady();
                 StringInput = GetUserInput();
             } while (StringInput != "yes");
+        }
+
+        public static bool InputValidation(string inputString, string validationType)
+        {
+            switch (validationType)
+            {
+                case "char":
+                    return true;
+                case "int":
+                    return true;
+                case "string":
+                    return true;
+                case "yesNo":
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
