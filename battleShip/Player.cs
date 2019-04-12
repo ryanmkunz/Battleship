@@ -67,6 +67,7 @@ namespace battleShip
 
         public void PlaceShips(Player player, Player enemyPlayer)
         {
+            //maybe put the logic to prevent overlapping here
             board.DisplayBoard();
             destroyer.PlaceShip(name, "Destroyer");
             board.UpdateBoard(player, enemyPlayer, destroyer.Position[0].ToUpper(), int.Parse(destroyer.Position[1]), "place", destroyer.Position[2], destroyer.Length, "D");            

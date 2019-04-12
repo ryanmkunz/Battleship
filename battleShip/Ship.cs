@@ -45,10 +45,10 @@ namespace battleShip
             {
                 if (Condition[i] == false)
                 {
-                    Damage++;
+                    this.Damage++;
                 }
             }
-            if (Damage == Length)
+            if (this.Damage == Length)
             {
                 return true;
             }

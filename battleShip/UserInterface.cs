@@ -82,7 +82,7 @@ namespace battleShip
             switch (validationType)
             {
                 case "char":
-                    if (alphabetArray.Contains(inputString))
+                    if (alphabetArray.Contains(inputString.ToUpper()))
                     {
                         return true;
                     }

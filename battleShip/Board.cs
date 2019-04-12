@@ -84,7 +84,6 @@ namespace battleShip
             }     
         }
 
-
         public void UpdateBoard(Player player, Player enemyPlayer, string letterCoordinate, int numberCoordinate, string updateType, string direction = "", int shipLength = 0, string shipType = "")
         {            
             columnNumber = Array.IndexOf(UserInterface.alphabetArray, letterCoordinate);
@@ -124,6 +123,7 @@ namespace battleShip
                     }
                     break;
                 case "shoot":
+                    //Add per ship 'damage' so the game can keep track of the score
                     if (enemyPlayer.board.GameState[rowNumber, columnNumber] == "D" || enemyPlayer.board.GameState[rowNumber, columnNumber] == "S" || enemyPlayer.board.GameState[rowNumber, columnNumber] == "B"
                         || enemyPlayer.board.GameState[rowNumber, columnNumber] == "C")
                     {

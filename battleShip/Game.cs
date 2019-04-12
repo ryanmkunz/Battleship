@@ -30,7 +30,7 @@ namespace battleShip
                 UserInterface.DisplayGameOver(player.name);
                 Environment.Exit(0);
             }
-            UserInterface.Delay();
+            //UserInterface.Delay();
             SwitchTurn();
             OkHaveANapThenFireMissiles(enemyPlayer, player);                                                                
         }
@@ -48,7 +48,7 @@ namespace battleShip
         {
             player1.GetPlayerName(1, player1);
             player1.PlaceShips(player, enemyPlayer);
-            UserInterface.Delay();
+            //UserInterface.Delay();
             SwitchTurn();
             enemyPlayer.GetPlayerName(2, player2);
             player2.PlaceShips(player, enemyPlayer);
